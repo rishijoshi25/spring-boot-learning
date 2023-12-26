@@ -7,28 +7,28 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="ACCESS_TEST")
-public class access {
+public class Access {
     @Id
     @Column(name="USER_NAME")
-    private String USER_NAME;
+    private String username;
 
     @Column(name="ACC")
-    private String ACC;
+    private String acc;
 
-    public access() {
+    public Access() {
         //default constructor
     }
 
-    public access(String USER_NAME, String ACC){
-        this.USER_NAME = USER_NAME;
-        this.ACC = ACC;
+    public Access(String username, String acc){
+        this.username = username;
+        this.acc = acc;
     }
 
     //Getters
-    public String getUsername() { return USER_NAME; }
-    public String getAcc() { return ACC; }
+    public String getUsername() { return username; }
+    public String getAcc() { return acc; }
 
     //Setters
-    public void setUsername(String USER_NAME) { this.USER_NAME = USER_NAME; }
-    public void setAcc(String ACC) { this.ACC = ACC; }
+    public void setUsername(String username) { this.username = username; }
+    public void setAcc(String acc) { this.acc = acc; }
 }
