@@ -54,7 +54,7 @@ public class AccessController {
 
     @PostMapping("/add-user")
     public Access addUser(@RequestBody Access acc) {
-        return accService.addUser(acc.getUsername(), acc.getAcc());
+        return accService.addUser(acc);
     }
     
     

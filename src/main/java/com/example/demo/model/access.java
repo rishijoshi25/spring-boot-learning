@@ -11,6 +11,7 @@ import jakarta.persistence.Table;
 @Table(name="ACCESS_TEST")
 public class Access {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID")
     private int id;
 
