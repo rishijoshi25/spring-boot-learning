@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 
 
@@ -49,5 +51,11 @@ public class AccessController {
         else 
             return ResponseEntity.notFound().build();
     }
+
+    @PostMapping("/add-user")
+    public Access addUser(@RequestBody Access acc) {
+        return accService.addUser(acc.getUsername(), acc.getAcc());
+    }
+    
     
 }

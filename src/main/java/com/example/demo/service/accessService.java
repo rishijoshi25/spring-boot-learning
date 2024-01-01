@@ -36,5 +36,13 @@ public class AccessService {
         });
 
         return updatedAccessList;
-    } 
+    }
+
+    public Access addUser(String username, String acc) {
+        Access user = new Access();
+        user.setUsername(username);
+        user.setAcc(acc);
+
+        return accRepository.save(user);
+    }
 }
